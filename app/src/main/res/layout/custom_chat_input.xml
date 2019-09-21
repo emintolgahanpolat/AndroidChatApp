@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize">
+
+
+    <RelativeLayout
+            android:layout_marginHorizontal="24dp"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageButton
+                android:id="@+id/attachmentButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/mask"
+                android:src="@drawable/ic_add_attachment"
+                android:layout_centerVertical="true"/>
+
+
+        <EditText
+                android:id="@+id/messageInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:windowBackground"
+                android:layout_toEndOf="@id/attachmentButton"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_toStartOf="@id/messageSendButton"
+                android:inputType="textAutoCorrect|textAutoComplete|textMultiLine|textCapSentences"
+                android:layout_toRightOf="@id/attachmentButton"
+                android:layout_toLeftOf="@id/messageSendButton"/>
+
+
+        <ImageButton
+                android:id="@+id/messageSendButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/mask"
+                android:src="@drawable/ic_send"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <View android:layout_width="match_parent"
+          android:layout_height="1px"
+          android:background="#000000"/>
+</RelativeLayout>

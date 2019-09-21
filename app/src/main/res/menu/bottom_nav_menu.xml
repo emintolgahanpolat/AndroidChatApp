@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <item
+            android:id="@+id/nav_chat_list"
+            android:icon="@drawable/ic_chat_bubble_black_24dp"
+            android:contentDescription="@string/title_chat"
+            android:title="@string/title_chat"/>
+
+    <item
+            android:id="@+id/nav_person_list"
+            android:icon="@drawable/ic_persons_black_24dp"
+            android:contentDescription="@string/title_person"
+            android:title="@string/title_person"/>
+
+    <item
+            android:id="@+id/nav_discovery"
+            android:icon="@drawable/ic_discover_black_24dp"
+            android:contentDescription="@string/title_discovery"
+            android:title="@string/title_discovery"/>
+</menu>
+

@@ -1,0 +1,98 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.1"
+    defaultConfig {
+        applicationId "com.emintolgahanpolat.chat"
+        minSdkVersion 15
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.1.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    def navigationVersion = "2.2.0-alpha02"
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigationVersion"
+    implementation "androidx.navigation:navigation-ui-ktx:$navigationVersion"
+
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.0-beta-3'
+    //Gson Library Start
+    implementation 'com.google.code.gson:gson:2.8.5'
+    //Gson Library End
+
+    //Multidex Library Start
+    implementation 'com.android.support:multidex:1.0.3'
+    //Multidex Library End
+
+    //Retrofit Library Start
+    implementation 'com.squareup.retrofit2:retrofit:2.6.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.12.1'//Son versiyon API 23 altını desteklemiyor
+    //Retrofit Library End
+
+    //Databind Start
+    kapt 'com.android.databinding:compiler:3.1.4'
+    //Databind End
+
+    //Navigation Fragment Start
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.2.0-alpha02'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.1.0'
+    //Navigation Fragment End
+
+    //Metarial
+    implementation "com.google.android.material:material:1.1.0-alpha10"
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
+
+
+    //Room Db
+    def roomDbVersion = "2.1.0"
+    implementation "androidx.room:room-runtime:$roomDbVersion"
+    kapt "androidx.room:room-compiler:$roomDbVersion"
+    kapt "android.arch.persistence.room:compiler:$roomDbVersion"
+
+    // Paging
+    def pagingVersion = "1.0.1"
+    implementation "android.arch.paging:runtime:$pagingVersion"
+
+
+    //image picker
+    implementation 'com.github.esafirm.android-image-picker:imagepicker:1.13.0'
+    //picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    implementation project(':mytoolbar')
+}

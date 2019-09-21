@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:padding="8dp"
+        android:id="@+id/customToolbar"
+        android:layout_height="?android:actionBarSize">
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:src="@drawable/empty_profile"
+            android:id="@+id/toolbarProfileImage"
+            android:layout_margin="3dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/app_name"
+              android:layout_toRightOf="@+id/toolbarProfileImage"
+              android:layout_toLeftOf="@+id/btnContainer"
+              android:textStyle="bold"
+              android:textColor="@android:color/black"
+              android:textSize="24sp"
+              android:layout_margin="3dp"
+              android:fontFamily="sans-serif-black"
+              android:layout_centerVertical="true"
+              android:id="@+id/toolbarTitle"
+              android:layout_toStartOf="@+id/btnContainer"
+              android:layout_toEndOf="@+id/toolbarProfileImage"/>
+
+    <LinearLayout
+            android:id="@+id/btnContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:orientation="horizontal">
+
+
+
+    </LinearLayout>
+</RelativeLayout>
